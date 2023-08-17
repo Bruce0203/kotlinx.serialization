@@ -1,3 +1,12 @@
+public final class kotlinx/serialization/json/ClassDiscriminatorMode : java/lang/Enum {
+	public static final field ALL_JSON_OBJECTS Lkotlinx/serialization/json/ClassDiscriminatorMode;
+	public static final field NONE Lkotlinx/serialization/json/ClassDiscriminatorMode;
+	public static final field POLYMORPHIC Lkotlinx/serialization/json/ClassDiscriminatorMode;
+	public static fun getEntries ()Lkotlin/enums/EnumEntries;
+	public static fun valueOf (Ljava/lang/String;)Lkotlinx/serialization/json/ClassDiscriminatorMode;
+	public static fun values ()[Lkotlinx/serialization/json/ClassDiscriminatorMode;
+}
+
 public final class kotlinx/serialization/json/DecodeSequenceMode : java/lang/Enum {
 	public static final field ARRAY_WRAPPED Lkotlinx/serialization/json/DecodeSequenceMode;
 	public static final field AUTO_DETECT Lkotlinx/serialization/json/DecodeSequenceMode;
@@ -88,6 +97,7 @@ public final class kotlinx/serialization/json/JsonBuilder {
 	public final fun getAllowSpecialFloatingPointValues ()Z
 	public final fun getAllowStructuredMapKeys ()Z
 	public final fun getClassDiscriminator ()Ljava/lang/String;
+	public final fun getClassDiscriminatorMode ()Lkotlinx/serialization/json/ClassDiscriminatorMode;
 	public final fun getCoerceInputValues ()Z
 	public final fun getDecodeEnumsCaseInsensitive ()Z
 	public final fun getEncodeDefaults ()Z
@@ -103,6 +113,7 @@ public final class kotlinx/serialization/json/JsonBuilder {
 	public final fun setAllowSpecialFloatingPointValues (Z)V
 	public final fun setAllowStructuredMapKeys (Z)V
 	public final fun setClassDiscriminator (Ljava/lang/String;)V
+	public final fun setClassDiscriminatorMode (Lkotlinx/serialization/json/ClassDiscriminatorMode;)V
 	public final fun setCoerceInputValues (Z)V
 	public final fun setDecodeEnumsCaseInsensitive (Z)V
 	public final fun setEncodeDefaults (Z)V
@@ -131,6 +142,7 @@ public final class kotlinx/serialization/json/JsonConfiguration {
 	public final fun getAllowSpecialFloatingPointValues ()Z
 	public final fun getAllowStructuredMapKeys ()Z
 	public final fun getClassDiscriminator ()Ljava/lang/String;
+	public final fun getClassDiscriminatorMode ()Lkotlinx/serialization/json/ClassDiscriminatorMode;
 	public final fun getCoerceInputValues ()Z
 	public final fun getDecodeEnumsCaseInsensitive ()Z
 	public final fun getEncodeDefaults ()Z
@@ -142,6 +154,7 @@ public final class kotlinx/serialization/json/JsonConfiguration {
 	public final fun getUseAlternativeNames ()Z
 	public final fun getUseArrayPolymorphism ()Z
 	public final fun isLenient ()Z
+	public final fun setClassDiscriminatorMode (Lkotlinx/serialization/json/ClassDiscriminatorMode;)V
 	public fun toString ()Ljava/lang/String;
 }
 
