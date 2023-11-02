@@ -1089,7 +1089,7 @@ class DataInputDecoder(val input: DataInput, var elementsCount: Int = 0) : Abstr
     override fun decodeEnum(enumDescriptor: SerialDescriptor): Int = input.readInt()
 
     override fun decodeElementIndex(descriptor: SerialDescriptor): Int {
-        if (elementIndex == elementsCount) return CompositeDecoder.DECODE_DONE
+        if (elementIndex == descriptor.elementsCount) return CompositeDecoder.DECODE_DONE
         return elementIndex++
     }
 
@@ -1260,7 +1260,7 @@ class DataInputDecoder(val input: DataInput, var elementsCount: Int = 0) : Abstr
     override fun decodeEnum(enumDescriptor: SerialDescriptor): Int = input.readInt()
 
     override fun decodeElementIndex(descriptor: SerialDescriptor): Int {
-        if (elementIndex == elementsCount) return CompositeDecoder.DECODE_DONE
+        if (elementIndex == descriptor.elementsCount) return CompositeDecoder.DECODE_DONE
         return elementIndex++
     }
 
